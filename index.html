@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giftastic Sports Gipher</title>
+
+    <!--Add stylesheets for bootstrap, responsive, css, and Javascript-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!--Add javascript file-->
+    <script type="text/javascript" src="assets/javascript/gipher.js"></script>
+
+    <!--Add giphy logo to top of page-->
+	<nav class="navbar navbar-dark" style = "background-color: black">
+	    <div class="navbar-header">
+	      	<img class="img-responsive" id="gif" src="assets/images/gif.png" alt="Giphy Logo">
+	    </div>
+    </nav>
+    <!--Add sports gif for fun-->
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-md-3"></div>
+        <div class="collapse navbar-collapse">
+            <img class = "img-responsive" id = "sports" src = "assets/images/sports.gif" alt = "Sports Logo">
+            
+            <!--Add form to input a sports team.  Add button to insert new sports team to the default list-->
+            <form class="navbar-form navbar" id="addTeam">
+	            <div class="form-group">
+	          	    <input type="text" class="form-control" id="teamInput" placeholder="Add a Sports Team">
+	            </div>
+                <button type="submit" id="addTeam" class="btn btn-danger">Add</button>
+            </form>
+            
+        </div>
+    </div>
+		
+	<!--Add div for the default/added team buttons-->
+	<div class="container">
+        <div class="row">
+            <div class="col-md-12 btn-group-horozontal" id="teamButtons">Team Buttons</div>
+        </div>
+        <div class = "row">
+            <div class="col-md-12" id="gifsDisplay"></div>
+        </div>    
+    </div>
+
+</body>
+
+</html>
