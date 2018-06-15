@@ -49,20 +49,20 @@ $(document).ready(function() {
                     var paragraph = $("<p>").text("Rating: " + displayRating);
                     displayDiv.append(paragraph);
                     var image = $("<img>").attr("src", notMoving);
-                    image.addClass("myShowImage");
-                    image.attr("data-stopped", notMoving);
-                    image.attr("data-moving", moving);
+                    image.addClass("isImageMoving");
+                    image.attr("data-still", notMoving);
+                    image.attr("data-animate", moving);
                     displayDiv.append(image);
                     $("#gifsDisplay").append(displayDiv);
                 }
                 
                 //On click to start and stop the gifs
-                $(".myShowImage").on("click", function() {
-                    if ($(this).attr("src") === $(this).attr("data-stopped")) {
-                        $(this).attr("src", $(this).attr("data-moving"));
+                $(".isImageMoving").on("click", function() {
+                    if ($(this).attr("src") === $(this).attr("data-still")) {
+                        $(this).attr("src", $(this).attr("data-animate"));
                     } 
-                    else if ($(this).attr("src") === $(this).attr("data-moving")) {
-                        $(this).attr("src", $(this).attr("data-stopped"));
+                    else if ($(this).attr("src") === $(this).attr("data-animate")) {
+                        $(this).attr("src", $(this).attr("data-still"));
                     }
     
                 });
